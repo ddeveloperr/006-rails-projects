@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+# encoding: utf-8
 Product.delete_all
 Product.create!(title: 'CoffeeScript',
   description: 
