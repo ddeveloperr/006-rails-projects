@@ -10,7 +10,7 @@ class OrdersControllerTest < ActionController::TestCase
     assert_response :success
     assert_not_nil assigns(:orders)
   end
-  
+
   test "requires item in cart" do
     get :new
     assert_redirected_to store_path
@@ -31,7 +31,6 @@ class OrdersControllerTest < ActionController::TestCase
     assert_difference('Order.count') do
       post :create, order: { address: @order.address, email: @order.email, name: @order.name, pay_type: @order.pay_type }
     end
-
     assert_redirected_to store_path
   end
 
